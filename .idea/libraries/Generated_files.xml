@@ -3,16 +3,28 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/webpack.config-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/food_search-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/venues-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/index-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/routes-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_food-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/city_search-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/actions/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_city-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/app-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/index-compiled.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/webpack.config-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/food_search-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venues-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/routes-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_food-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/city_search-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/actions/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_city-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/app-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/index-compiled.js" />
     </CLASSES>

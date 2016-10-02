@@ -6,12 +6,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _redux = require('redux');
 
-var rootReducer = (0, _redux.combineReducers)({
-  state: function state() {
-    var _state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+var _reducer_city = require('./reducer_city');
 
-    return _state;
-  }
+var _reducer_city2 = _interopRequireDefault(_reducer_city);
+
+var _reducer_food = require('./reducer_food');
+
+var _reducer_food2 = _interopRequireDefault(_reducer_food);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var rootReducer = (0, _redux.combineReducers)({
+  city: _reducer_city2.default,
+  food: _reducer_food2.default
 });
 
 exports.default = rootReducer;
