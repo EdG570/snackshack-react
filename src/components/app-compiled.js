@@ -33,7 +33,6 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Hello from App!',
         this.props.children
       );
     }
