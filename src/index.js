@@ -9,8 +9,9 @@ import { createStore, applyMiddleware, compose } from 'redux';
 
 import reducers from './reducers';
 import routes from './routes';
+import api from './middleware/api';
 
-const middleware = [promise, thunk, logger({collapsed: true})];
+const middleware = [promise, api, thunk, logger({collapsed: true})];
 
 let store = createStore(reducers, {}, compose(applyMiddleware(...middleware)));
 

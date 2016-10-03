@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
 import City from './reducer_city';
-import Food from './reducer_food';
+import Venues from './reducer_venues';
 
 const rootReducer = combineReducers({
   city: City,
-  food: Food
+  venues: Venues
 });
 
 export default rootReducer;

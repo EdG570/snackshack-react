@@ -34,9 +34,13 @@ var _routes = require('./routes');
 
 var _routes2 = _interopRequireDefault(_routes);
 
+var _api = require('./middleware/api');
+
+var _api2 = _interopRequireDefault(_api);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var middleware = [_reduxPromise2.default, _reduxThunk2.default, (0, _reduxLogger2.default)({ collapsed: true })];
+var middleware = [_reduxPromise2.default, _api2.default, _reduxThunk2.default, (0, _reduxLogger2.default)({ collapsed: true })];
 
 var store = (0, _redux.createStore)(_reducers2.default, {}, (0, _redux.compose)(_redux.applyMiddleware.apply(undefined, middleware)));
 

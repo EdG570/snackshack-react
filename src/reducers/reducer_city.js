@@ -1,11 +1,15 @@
+import { actions } from '../actions/index';
+
 const initialState = {
   city: ''
 };
 
 export default function(state = initialState, action) {
   switch(action.type) {
-    case 'SAVE_CITY':
-      return action.payload;
+    case actions.SAVE_CITY:
+      return Object.assign({}, state, {
+        city: action.payload
+      });
     default:
       return state;
   }

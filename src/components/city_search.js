@@ -16,7 +16,7 @@ class CitySearch extends Component {
   }
 
   validate(e) {
-    const regex = /^[a-zA-Z\s]*$/;
+    const regex = /^[a-zA-Z\s\,]*$/;
 
     if (!this.state.city) {
       e.preventDefault();
@@ -35,7 +35,6 @@ class CitySearch extends Component {
 
   updateState(e) {
     this.setState({ city: e.target.value });
-    console.log(this.state.city);
   }
 
   render() {
