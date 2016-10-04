@@ -376,7 +376,7 @@ html, body {
   padding-top: 5em; }
   .search-container h1 {
     letter-spacing: 1px;
-    color: #ff5951;
+    color: #d24649;
     font-size: 3em;
     margin: 0; }
   .search-container input, .search-container a {
@@ -384,7 +384,8 @@ html, body {
   .search-container input {
     width: 70%;
     margin: 1em 0;
-    padding-left: 0.5em; }
+    padding-left: 0.5em;
+    border-radius: 5px; }
   .search-container a {
     display: block;
     width: 300px;
@@ -392,7 +393,8 @@ html, body {
     border: none;
     background-color: dodgerblue;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    border-radius: 5px; }
   .search-container a:hover {
     cursor: pointer;
     background-color: #399eff; }

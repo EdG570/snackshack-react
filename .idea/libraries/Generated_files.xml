@@ -11,14 +11,16 @@
         <item url="file://$PROJECT_DIR$/src/reducers/index-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/venues-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/middleware/api-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/search-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/routes-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/reducers/reducer_food-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/actions/index-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_city-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/index-compiled.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_food-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venue_item-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_food-compiled.js" />
       <root url="file://$PROJECT_DIR$/webpack.config-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/city_search-compiled.js" />
@@ -29,8 +31,8 @@
       <root url="file://$PROJECT_DIR$/src/reducers/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/venues-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/middleware/api-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/search-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/routes-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/reducers/reducer_food-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/actions/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_city-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/index-compiled.js" />
