@@ -398,3 +398,32 @@ html, body {
   .search-container a:hover {
     cursor: pointer;
     background-color: #399eff; }
+
+.venue-list {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto; }
+  .venue-list h1 {
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 3em;
+    background-color: #d24649; }
+  .venue-list ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; }
+    .venue-list ul li {
+      width: 350px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      margin: 1em;
+      padding: 0.5em;
+      text-align: center; }
+      .venue-list ul li img {
+        display: block;
+        margin: 0 auto; }

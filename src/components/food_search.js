@@ -23,7 +23,7 @@ class FoodSearch extends Component {
       this.setState({ error: 'This field cannot be empty' });
     } else if (!regex.test(this.state.food)) {
       e.preventDefault();
-      this.setState({ error: 'This field only accepts letters' });
+      this.setState({ error: 'This field only accepts alpha characters' });
     }
 
     if (this.state.error) {
