@@ -42,6 +42,11 @@ var FoodSearch = function (_Component) {
   }
 
   _createClass(FoodSearch, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.searchInput.focus();
+    }
+  }, {
     key: 'validate',
     value: function validate(e) {
       var regex = /^[a-zA-Z\s]*$/;
@@ -58,7 +63,7 @@ var FoodSearch = function (_Component) {
         return;
       }
 
-      console.log(this.props.city);
+      this.props.saveFood(this.state.food);
       this.props.fetchVenues(this.props.city.city, this.state.food);
     }
   }, {
@@ -69,6 +74,8 @@ var FoodSearch = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'div',
         { className: 'search-container' },
@@ -80,6 +87,9 @@ var FoodSearch = function (_Component) {
         _react2.default.createElement('input', { type: 'text',
           placeholder: 'Enter a type of food here',
           value: this.state.food,
+          ref: function ref(input) {
+            return _this2.searchInput = input;
+          },
           onChange: this.updateState.bind(this)
         }),
         _react2.default.createElement(
@@ -99,7 +109,10 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return (0, _redux.bindActionCreators)({ fetchVenues: _index.fetchVenues }, dispatch);
+  return (0, _redux.bindActionCreators)({
+    fetchVenues: _index.fetchVenues,
+    saveFood: _index.saveFood
+  }, dispatch);
 }
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(FoodSearch);

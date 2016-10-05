@@ -6,14 +6,15 @@
         <item url="file://$PROJECT_DIR$/src/components/city_search-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/venue-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_venues-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/search_details-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/app-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/food_search-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/index-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/venues_list-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/middleware/api-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/routes-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/venue_image-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/actions/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/venue_image-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_city-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/venue_detail-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/index-compiled.js" />
@@ -30,15 +31,16 @@
       <root url="file://$PROJECT_DIR$/src/components/city_search-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/venue-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_venues-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/search_details-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/app-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/food_search-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/venues_list-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/middleware/api-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/routes-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/venue_image-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/actions/index-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/reducers/reducer_city-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venue_image-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_search-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/venue_detail-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/index-compiled.js" />
     </CLASSES>

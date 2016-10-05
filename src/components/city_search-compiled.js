@@ -42,6 +42,11 @@ var CitySearch = function (_Component) {
   }
 
   _createClass(CitySearch, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.searchInput.focus();
+    }
+  }, {
     key: 'validate',
     value: function validate(e) {
       var regex = /^[a-zA-Z\s\,]*$/;
@@ -68,6 +73,7 @@ var CitySearch = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
 
       return _react2.default.createElement(
         'div',
@@ -85,6 +91,9 @@ var CitySearch = function (_Component) {
         _react2.default.createElement('input', { type: 'text',
           value: this.state.city,
           placeholder: 'Enter a location here',
+          ref: function ref(input) {
+            return _this2.searchInput = input;
+          },
           onChange: this.updateState.bind(this)
         }),
         _react2.default.createElement(

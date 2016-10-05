@@ -1,14 +1,22 @@
 export const actions = {
   SAVE_CITY: 'SAVE_CITY',
+  SAVE_FOOD: 'SAVE_FOOD',
   FETCH_VENUES: 'FETCH_VENUES',
   FETCH_VENUES_SUCCESS: 'FETCH_VENUES_SUCCESS',
-  FETCH_VENUES_ERROR: 'FETCH_VENUES_ERROR'
+  FETCH_VENUES_ERROR: 'FETCH_VENUES_ERROR',
 };
 
 export function saveCity(city) {
   return {
     type: actions.SAVE_CITY,
     payload: city
+  };
+}
+
+export function saveFood(food) {
+  return {
+    type: actions.SAVE_FOOD,
+    payload: food
   };
 }
 

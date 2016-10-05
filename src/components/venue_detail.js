@@ -14,9 +14,9 @@ class VenueDetails extends Component {
     let likes;
 
     if (tips && tips[0].likes) {
-      likes = (<span>Likes: {tips[0].likes.count}</span>);
+      likes = (<span>{tips[0].likes.count} Likes</span>);
     } else {
-      likes = (<span>Likes: 0</span>);
+      likes = (<span>0 Likes</span>);
     }
 
     return likes;
@@ -54,16 +54,16 @@ class VenueDetails extends Component {
     let address = this.isAddress();
 
     return (
-      <div>
-        {likes}
+      <div className="venue-detail">
         {rating}
         {address}
+        {likes}
       </div>
     );
   }
 }
 
-VenuesList.propTypes = {
+VenueDetails.propTypes = {
   venue: React.PropTypes.object.isRequired
 };
 

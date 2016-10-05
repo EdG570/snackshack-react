@@ -4,9 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.saveCity = saveCity;
+exports.saveFood = saveFood;
 exports.fetchVenues = fetchVenues;
 var actions = exports.actions = {
   SAVE_CITY: 'SAVE_CITY',
+  SAVE_FOOD: 'SAVE_FOOD',
   FETCH_VENUES: 'FETCH_VENUES',
   FETCH_VENUES_SUCCESS: 'FETCH_VENUES_SUCCESS',
   FETCH_VENUES_ERROR: 'FETCH_VENUES_ERROR'
@@ -16,6 +18,13 @@ function saveCity(city) {
   return {
     type: actions.SAVE_CITY,
     payload: city
+  };
+}
+
+function saveFood(food) {
+  return {
+    type: actions.SAVE_FOOD,
+    payload: food
   };
 }
 

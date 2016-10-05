@@ -14,7 +14,7 @@ class VenueImage extends Component {
     if (photos && photos.items) {
       image = (<img src={`${photos.items[0].prefix}300x200${photos.items[0].suffix}`} alt="Venue image"/>);
     } else {
-      image = (<img src="src/assets/snack-logo.svg" alt="snackshack logo"/>)
+      image = (<img className="fallback-photo" src="src/assets/snack-logo.svg" alt="snackshack logo"/>)
     }
 
     return image;
@@ -31,7 +31,7 @@ class VenueImage extends Component {
   }
 }
 
-VenuesList.propTypes = {
+VenueImage.propTypes = {
   venue: React.PropTypes.object
 };
 

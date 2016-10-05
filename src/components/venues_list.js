@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import Venue from './venue';
+import SearchDetails from './search_details';
+
 
 class VenuesList extends Component {
   constructor(props) {
@@ -13,6 +15,7 @@ class VenuesList extends Component {
     return (
       <div className="venue-list">
         <h1>SNACKSHACK</h1>
+        <SearchDetails  />
         <ul>
           {
             this.props.venues.map((venue) => {

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -33,85 +33,85 @@ var VenueDetails = function (_Component) {
   }
 
   _createClass(VenueDetails, [{
-    key: 'isLikes',
+    key: "isLikes",
     value: function isLikes() {
       var tips = this.props.venue.tips;
       var likes = void 0;
 
       if (tips && tips[0].likes) {
         likes = _react2.default.createElement(
-          'span',
+          "span",
           null,
-          'Likes: ',
-          tips[0].likes.count
+          tips[0].likes.count,
+          " Likes"
         );
       } else {
         likes = _react2.default.createElement(
-          'span',
+          "span",
           null,
-          'Likes: 0'
+          "0 Likes"
         );
       }
 
       return likes;
     }
   }, {
-    key: 'isRating',
+    key: "isRating",
     value: function isRating() {
       var venue = this.props.venue.venue;
       var rating = void 0;
 
       if (venue.rating) {
         rating = _react2.default.createElement(
-          'span',
+          "span",
           null,
           venue.rating
         );
       } else {
         rating = _react2.default.createElement(
-          'span',
+          "span",
           null,
-          'NR'
+          "NR"
         );
       }
 
       return rating;
     }
   }, {
-    key: 'isAddress',
+    key: "isAddress",
     value: function isAddress() {
       var venue = this.props.venue.venue;
       var address = void 0;
 
       if (venue.location && venue.location.address) {
         address = _react2.default.createElement(
-          'span',
+          "span",
           null,
           venue.location.address
         );
       } else {
         address = _react2.default.createElement(
-          'span',
+          "span",
           null,
-          'Address unavailable'
+          "Address unavailable"
         );
       }
 
       return address;
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var likes = this.isLikes();
       var rating = this.isRating();
       var address = this.isAddress();
 
       return _react2.default.createElement(
-        'div',
-        null,
-        likes,
+        "div",
+        { className: "venue-detail" },
         rating,
-        address
+        address,
+        likes
       );
     }
   }]);
@@ -119,7 +119,7 @@ var VenueDetails = function (_Component) {
   return VenueDetails;
 }(_react.Component);
 
-VenuesList.propTypes = {
+VenueDetails.propTypes = {
   venue: _react2.default.PropTypes.object.isRequired
 };
 

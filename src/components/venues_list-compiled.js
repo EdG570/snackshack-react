@@ -18,6 +18,10 @@ var _venue = require('./venue');
 
 var _venue2 = _interopRequireDefault(_venue);
 
+var _search_details = require('./search_details');
+
+var _search_details2 = _interopRequireDefault(_search_details);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46,6 +50,7 @@ var VenuesList = function (_Component) {
           null,
           'SNACKSHACK'
         ),
+        _react2.default.createElement(_search_details2.default, null),
         _react2.default.createElement(
           'ul',
           null,

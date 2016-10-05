@@ -1,7 +1,8 @@
 import { actions } from '../actions/index';
 
 const initialState = {
-  city: ''
+  city: '',
+  food: ''
 };
 
 export default function(state = initialState, action) {
@@ -9,6 +10,10 @@ export default function(state = initialState, action) {
     case actions.SAVE_CITY:
       return Object.assign({}, state, {
         city: action.payload
+      });
+    case actions.SAVE_FOOD:
+      return Object.assign({}, state, {
+        food: action.payload
       });
     default:
       return state;

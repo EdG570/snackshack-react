@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-import { fetchVenues } from '../actions/index';
+import { fetchVenues, saveFood } from '../actions/index';
 
 class FoodSearch extends Component {
   constructor(props) {
@@ -13,6 +13,10 @@ class FoodSearch extends Component {
       food: '',
       error: ''
     }
+  }
+
+  componentDidMount() {
+    this.searchInput.focus();
   }
 
   validate(e) {
@@ -30,7 +34,7 @@ class FoodSearch extends Component {
       return;
     }
 
-    console.log(this.props.city);
+    this.props.saveFood(this.state.food);
     this.props.fetchVenues(this.props.city.city, this.state.food);
   }
 
@@ -45,6 +49,7 @@ class FoodSearch extends Component {
         <input type="text"
                placeholder="Enter a type of food here"
                value={this.state.food}
+               ref={(input) => this.searchInput = input }
                onChange={ this.updateState.bind(this) }
         />
         <Link onClick={ this.validate.bind(this) } to='/venues'>Search</Link>
@@ -58,7 +63,10 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchVenues: fetchVenues }, dispatch);
+  return bindActionCreators({
+    fetchVenues: fetchVenues,
+    saveFood: saveFood
+  }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FoodSearch);

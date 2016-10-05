@@ -13,6 +13,10 @@ exports.default = function () {
       return Object.assign({}, state, {
         city: action.payload
       });
+    case _index.actions.SAVE_FOOD:
+      return Object.assign({}, state, {
+        food: action.payload
+      });
     default:
       return state;
   }
@@ -21,7 +25,8 @@ exports.default = function () {
 var _index = require('../actions/index');
 
 var initialState = {
-  city: ''
+  city: '',
+  food: ''
 };
 
-//# sourceMappingURL=reducer_city-compiled.js.map
+//# sourceMappingURL=reducer_search-compiled.js.map

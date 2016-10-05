@@ -15,6 +15,10 @@ class CitySearch extends Component {
     };
   }
 
+  componentDidMount() {
+    this.searchInput.focus();
+  }
+
   validate(e) {
     const regex = /^[a-zA-Z\s\,]*$/;
 
@@ -46,6 +50,7 @@ class CitySearch extends Component {
         <input type="text"
                value={this.state.city}
                placeholder="Enter a location here"
+               ref={(input) => this.searchInput = input }
                onChange={ this.updateState.bind(this) }
         />
         <Link onClick={ this.validate.bind(this) } to='/food'>Next</Link>

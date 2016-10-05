@@ -39,7 +39,7 @@ var VenueImage = function (_Component) {
       if (photos && photos.items) {
         image = _react2.default.createElement("img", { src: photos.items[0].prefix + "300x200" + photos.items[0].suffix, alt: "Venue image" });
       } else {
-        image = _react2.default.createElement("img", { src: "src/assets/snack-logo.svg", alt: "snackshack logo" });
+        image = _react2.default.createElement("img", { className: "fallback-photo", src: "src/assets/snack-logo.svg", alt: "snackshack logo" });
       }
 
       return image;
@@ -60,7 +60,7 @@ var VenueImage = function (_Component) {
   return VenueImage;
 }(_react.Component);
 
-VenuesList.propTypes = {
+VenueImage.propTypes = {
   venue: _react2.default.PropTypes.object
 };
 
