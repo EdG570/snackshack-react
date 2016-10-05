@@ -12,14 +12,14 @@ class SearchDetails extends Component {
 };
 
 SearchDetails.propTypes = {
-  city: React.PropTypes.object.isRequired,
-  food: React.PropTypes.object.isRequired
+  city: React.PropTypes.string.isRequired,
+  food: React.PropTypes.string.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    city: state.city,
-    food: state.food
+    city: state.query.city,
+    food: state.query.food
   };
 }
 

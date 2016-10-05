@@ -35,7 +35,7 @@ class FoodSearch extends Component {
     }
 
     this.props.saveFood(this.state.food);
-    this.props.fetchVenues(this.props.city.city, this.state.food);
+    this.props.fetchVenues(this.props.city, this.state.food);
   }
 
   updateState(e) {
@@ -59,7 +59,7 @@ class FoodSearch extends Component {
 }
 
 function mapStateToProps(state) {
-  return { city: state.city };
+  return { city: state.query.city };
 }
 
 function mapDispatchToProps(dispatch) {

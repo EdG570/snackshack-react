@@ -64,7 +64,7 @@ var FoodSearch = function (_Component) {
       }
 
       this.props.saveFood(this.state.food);
-      this.props.fetchVenues(this.props.city.city, this.state.food);
+      this.props.fetchVenues(this.props.city, this.state.food);
     }
   }, {
     key: 'updateState',
@@ -105,7 +105,7 @@ var FoodSearch = function (_Component) {
 }(_react.Component);
 
 function mapStateToProps(state) {
-  return { city: state.city };
+  return { city: state.query.city };
 }
 
 function mapDispatchToProps(dispatch) {

@@ -26,6 +26,10 @@ var _venues_list = require('./components/venues_list');
 
 var _venues_list2 = _interopRequireDefault(_venues_list);
 
+var _venue_detail = require('./components/venue_detail');
+
+var _venue_detail2 = _interopRequireDefault(_venue_detail);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _react2.default.createElement(
@@ -33,7 +37,8 @@ exports.default = _react2.default.createElement(
   { path: '/', component: _app2.default },
   _react2.default.createElement(_reactRouter.IndexRoute, { component: _city_search2.default }),
   _react2.default.createElement(_reactRouter.Route, { path: '/food', component: _food_search2.default }),
-  _react2.default.createElement(_reactRouter.Route, { path: '/venues', component: _venues_list2.default })
+  _react2.default.createElement(_reactRouter.Route, { path: '/venues', component: _venues_list2.default }),
+  _react2.default.createElement(_reactRouter.Route, { path: '/venues/:venue', component: _venue_detail2.default })
 );
 
 //# sourceMappingURL=routes-compiled.js.map

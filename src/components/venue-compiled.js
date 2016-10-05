@@ -10,13 +10,19 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _venue_detail = require('./venue_detail');
+var _reactRedux = require('react-redux');
 
-var _venue_detail2 = _interopRequireDefault(_venue_detail);
+var _redux = require('redux');
+
+var _venue_summary = require('./venue_summary');
+
+var _venue_summary2 = _interopRequireDefault(_venue_summary);
 
 var _venue_image = require('./venue_image');
 
 var _venue_image2 = _interopRequireDefault(_venue_image);
+
+var _actions = require('../actions');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,10 +38,20 @@ var Venue = function (_Component) {
   function Venue(props) {
     _classCallCheck(this, Venue);
 
-    return _possibleConstructorReturn(this, (Venue.__proto__ || Object.getPrototypeOf(Venue)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Venue.__proto__ || Object.getPrototypeOf(Venue)).call(this, props));
+
+    _this.goToDetails = _this.goToDetails.bind(_this);
+    return _this;
   }
 
   _createClass(Venue, [{
+    key: 'goToDetails',
+    value: function goToDetails() {
+      var venue = this.props.venue.venue;
+
+      this.context.router.push('/venues/' + venue.name);
+    }
+  }, {
     key: 'render',
     value: function render() {
       var venue = this.props.venue.venue;
@@ -45,14 +61,14 @@ var Venue = function (_Component) {
         null,
         _react2.default.createElement(
           'li',
-          { key: venue.name },
+          { onClick: this.goToDetails, key: venue.name },
           _react2.default.createElement(
             'h2',
             null,
             venue.name
           ),
           _react2.default.createElement(_venue_image2.default, { venue: this.props.venue }),
-          _react2.default.createElement(_venue_detail2.default, { venue: this.props.venue })
+          _react2.default.createElement(_venue_summary2.default, { venue: this.props.venue })
         )
       );
     }
@@ -63,6 +79,10 @@ var Venue = function (_Component) {
 
 Venue.propTypes = {
   venue: _react2.default.PropTypes.object
+};
+
+Venue.contextTypes = {
+  router: _react2.default.PropTypes.object
 };
 
 exports.default = Venue;

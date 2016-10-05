@@ -18,8 +18,8 @@ class VenuesList extends Component {
         <SearchDetails  />
         <ul>
           {
-            this.props.venues.map((venue) => {
-              return <Venue key={venue.venue.name} venue={venue}/>
+            this.props.venues.map((venue, index) => {
+              return <Venue key={index}  venue={venue}/>
             })
           }
         </ul>

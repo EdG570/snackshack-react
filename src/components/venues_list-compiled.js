@@ -54,8 +54,8 @@ var VenuesList = function (_Component) {
         _react2.default.createElement(
           'ul',
           null,
-          this.props.venues.map(function (venue) {
-            return _react2.default.createElement(_venue2.default, { key: venue.venue.name, venue: venue });
+          this.props.venues.map(function (venue, index) {
+            return _react2.default.createElement(_venue2.default, { key: index, venue: venue });
           })
         )
       );

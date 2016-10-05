@@ -50,14 +50,14 @@ var SearchDetails = function (_Component) {
 ;
 
 SearchDetails.propTypes = {
-  city: _react2.default.PropTypes.object.isRequired,
-  food: _react2.default.PropTypes.object.isRequired
+  city: _react2.default.PropTypes.string.isRequired,
+  food: _react2.default.PropTypes.string.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    city: state.city,
-    food: state.food
+    city: state.query.city,
+    food: state.query.food
   };
 }
 

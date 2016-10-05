@@ -1,6 +1,7 @@
 export const actions = {
   SAVE_CITY: 'SAVE_CITY',
   SAVE_FOOD: 'SAVE_FOOD',
+  SAVE_SELECTED_VENUE: 'SAVE_SELECTED_VENUE',
   FETCH_VENUES: 'FETCH_VENUES',
   FETCH_VENUES_SUCCESS: 'FETCH_VENUES_SUCCESS',
   FETCH_VENUES_ERROR: 'FETCH_VENUES_ERROR',
@@ -39,4 +40,5 @@ function fetchVenuesAction(city, food) {
     }
   };
 }
+
 

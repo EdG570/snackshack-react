@@ -17,8 +17,7 @@ var _reducer_venues2 = _interopRequireDefault(_reducer_venues);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootReducer = (0, _redux.combineReducers)({
-  city: _reducer_search2.default,
-  food: _reducer_search2.default,
+  query: _reducer_search2.default,
   venues: _reducer_venues2.default
 });
 
