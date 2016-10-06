@@ -1,11 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import VenueSummary from './venue_summary';
 import VenueImage from './venue_image';
 
-import { saveSelectedVenue } from '../actions';
+import { saveSelectedVenue } from '../../actions';
 
 class Venue extends Component {
   constructor(props) {

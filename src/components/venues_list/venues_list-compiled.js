@@ -10,19 +10,21 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = require('react-redux');
-
 var _redux = require('redux');
 
-var _venue_summary = require('./venue_summary');
+var _reactRedux = require('react-redux');
 
-var _venue_summary2 = _interopRequireDefault(_venue_summary);
+var _venue = require('./venue');
 
-var _venue_image = require('./venue_image');
+var _venue2 = _interopRequireDefault(_venue);
 
-var _venue_image2 = _interopRequireDefault(_venue_image);
+var _search_details = require('../search_details');
 
-var _actions = require('../actions');
+var _search_details2 = _interopRequireDefault(_search_details);
+
+var _header = require('../header');
+
+var _header2 = _interopRequireDefault(_header);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,59 +34,47 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Venue = function (_Component) {
-  _inherits(Venue, _Component);
+var VenuesList = function (_Component) {
+  _inherits(VenuesList, _Component);
 
-  function Venue(props) {
-    _classCallCheck(this, Venue);
+  function VenuesList(props) {
+    _classCallCheck(this, VenuesList);
 
-    var _this = _possibleConstructorReturn(this, (Venue.__proto__ || Object.getPrototypeOf(Venue)).call(this, props));
-
-    _this.goToDetails = _this.goToDetails.bind(_this);
-    return _this;
+    return _possibleConstructorReturn(this, (VenuesList.__proto__ || Object.getPrototypeOf(VenuesList)).call(this, props));
   }
 
-  _createClass(Venue, [{
-    key: 'goToDetails',
-    value: function goToDetails() {
-      var venue = this.props.venue.venue;
-
-      this.context.router.push('/venues/' + venue.name);
-    }
-  }, {
+  _createClass(VenuesList, [{
     key: 'render',
     value: function render() {
-      var venue = this.props.venue.venue;
-
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'venue-list' },
+        _react2.default.createElement(_header2.default, null),
+        _react2.default.createElement(_search_details2.default, null),
         _react2.default.createElement(
-          'li',
-          { onClick: this.goToDetails, key: venue.name },
-          _react2.default.createElement(
-            'h2',
-            null,
-            venue.name
-          ),
-          _react2.default.createElement(_venue_image2.default, { venue: this.props.venue }),
-          _react2.default.createElement(_venue_summary2.default, { venue: this.props.venue })
+          'ul',
+          null,
+          this.props.venues.map(function (venue, index) {
+            return _react2.default.createElement(_venue2.default, { key: index, venue: venue });
+          })
         )
       );
     }
   }]);
 
-  return Venue;
+  return VenuesList;
 }(_react.Component);
 
-Venue.propTypes = {
-  venue: _react2.default.PropTypes.object
+VenuesList.propTypes = {
+  venues: _react2.default.PropTypes.array.isRequired
 };
 
-Venue.contextTypes = {
-  router: _react2.default.PropTypes.object
-};
+function mapStateToProps(state) {
+  return {
+    venues: state.venues.venues
+  };
+}
 
-exports.default = Venue;
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(VenuesList);
 
-//# sourceMappingURL=venue-compiled.js.map
+//# sourceMappingURL=venues_list-compiled.js.map

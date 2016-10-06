@@ -22,11 +22,11 @@ var _food_search = require('./components/food_search');
 
 var _food_search2 = _interopRequireDefault(_food_search);
 
-var _venues_list = require('./components/venues_list');
+var _venues_list = require('./components/venues_list/venues_list');
 
 var _venues_list2 = _interopRequireDefault(_venues_list);
 
-var _venue_detail = require('./components/venue_detail');
+var _venue_detail = require('./components/venue_detail/venue_detail');
 
 var _venue_detail2 = _interopRequireDefault(_venue_detail);
 

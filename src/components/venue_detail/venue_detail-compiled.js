@@ -10,17 +10,19 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _redux = require('redux');
-
 var _reactRedux = require('react-redux');
 
-var _venue = require('./venue');
+var _venue_image = require('../venues_list/venue_image');
 
-var _venue2 = _interopRequireDefault(_venue);
+var _venue_image2 = _interopRequireDefault(_venue_image);
 
-var _search_details = require('./search_details');
+var _user_feedback = require('./user_feedback');
 
-var _search_details2 = _interopRequireDefault(_search_details);
+var _user_feedback2 = _interopRequireDefault(_user_feedback);
+
+var _header = require('../header');
+
+var _header2 = _interopRequireDefault(_header);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,42 +32,45 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var VenuesList = function (_Component) {
-  _inherits(VenuesList, _Component);
+var VenueDetail = function (_Component) {
+  _inherits(VenueDetail, _Component);
 
-  function VenuesList(props) {
-    _classCallCheck(this, VenuesList);
+  function VenueDetail(props) {
+    _classCallCheck(this, VenueDetail);
 
-    return _possibleConstructorReturn(this, (VenuesList.__proto__ || Object.getPrototypeOf(VenuesList)).call(this, props));
+    return _possibleConstructorReturn(this, (VenueDetail.__proto__ || Object.getPrototypeOf(VenueDetail)).call(this, props));
   }
 
-  _createClass(VenuesList, [{
+  _createClass(VenueDetail, [{
+    key: 'findVenue',
+    value: function findVenue() {
+      var _this2 = this;
+
+      return this.props.venues.filter(function (venue) {
+        return venue.venue.name === _this2.props.params.venue;
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var selectedVenue = this.findVenue();
+      var name = selectedVenue[0].venue.name;
+
       return _react2.default.createElement(
         'div',
-        { className: 'venue-list' },
-        _react2.default.createElement(
-          'h1',
-          null,
-          'SNACKSHACK'
-        ),
-        _react2.default.createElement(_search_details2.default, null),
-        _react2.default.createElement(
-          'ul',
-          null,
-          this.props.venues.map(function (venue, index) {
-            return _react2.default.createElement(_venue2.default, { key: index, venue: venue });
-          })
-        )
+        { className: 'venue-container' },
+        _react2.default.createElement(_header2.default, null),
+        _react2.default.createElement(_venue_image2.default, { venue: selectedVenue[0] }),
+        _react2.default.createElement(_user_feedback2.default, { venue: selectedVenue[0] }),
+        console.log(selectedVenue)
       );
     }
   }]);
 
-  return VenuesList;
+  return VenueDetail;
 }(_react.Component);
 
-VenuesList.propTypes = {
+VenueDetail.propTypes = {
   venues: _react2.default.PropTypes.array.isRequired
 };
 
@@ -75,6 +80,6 @@ function mapStateToProps(state) {
   };
 }
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(VenuesList);
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(VenueDetail);
 
-//# sourceMappingURL=venues_list-compiled.js.map
+//# sourceMappingURL=venue_detail-compiled.js.map

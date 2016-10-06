@@ -2,23 +2,25 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/src/components/venue_detail/venue_detail-compiled.js" />
         <item url="file://$PROJECT_DIR$/webpack.config-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/venue_detail-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/city_search-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/venue-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_venues-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/venues_list/venue-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/search_details-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/app-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/reducers/reducer_selected_venue-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/food_search-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/index-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/venues_list-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/venues_list/venues_list-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/middleware/api-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/routes-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/actions/index-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/venue_image-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/venues_list/venue_image-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/header-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/style/scss/partials/_venue-detail-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_search-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/venue_summary-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/venues_list/venue_summary-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/venue_detail/user_feedback-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/index-compiled.js" />
       </sourceFilesUrls>
     </properties>
@@ -29,23 +31,27 @@
       <root url="file://$PROJECT_DIR$/src/components/venue_item-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/search-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/search-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_selected_venue-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_selected_venue-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venue_detail/venue_detail-compiled.js" />
       <root url="file://$PROJECT_DIR$/webpack.config-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/venue_detail-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/city_search-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/venue-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_venues-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venues_list/venue-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/search_details-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/app-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/reducers/reducer_selected_venue-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/food_search-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/index-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/venues_list-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venues_list/venues_list-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/middleware/api-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/routes-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/actions/index-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/venue_image-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venues_list/venue_image-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/header-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/style/scss/partials/_venue-detail-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_search-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/venue_summary-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venues_list/venue_summary-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/venue_detail/user_feedback-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/index-compiled.js" />
     </CLASSES>
     <SOURCES />

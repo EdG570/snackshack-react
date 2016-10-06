@@ -59,28 +59,32 @@
         margin: 0 auto;
         font-weight: 300;
       }
+    }
 
-      .venue-detail > span:first-child {
-        float: left;
-        background-color: green;
-        border-radius: 50%;
-        width: 30px;
-        padding: 0.25em 0;
-        color: #fff;
-      }
-
-      .venue-detail > span:last-child {
-        float: right;
-        background-color: #d26e75;
-        border-radius: 5px;
-        color: #fff;
-        padding: 0.25em;
-      }
-
-      .venue-detail > span:first-child + span {
-        position: relative;
-        top: 0.2em;
-      }
+    li:hover {
+      cursor: pointer;
     }
   }
+}
+
+div > span:first-child {
+  float: left;
+  background-color: green;
+  border-radius: 50%;
+  width: 30px;
+  padding: 0.25em 0;
+  color: #fff;
+}
+
+div > span:last-child {
+  float: right;
+  background-color: #d26e75;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.25em;
+}
+
+div > span:first-child + span {
+  position: relative;
+  top: 0.2em;
 }

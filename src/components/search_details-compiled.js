@@ -38,7 +38,7 @@ var SearchDetails = function (_Component) {
         _react2.default.createElement(
           'h3',
           null,
-          'Displaying results for ' + this.props.food.food + ' in ' + this.props.city.city
+          'Displaying results for ' + this.props.food + ' in ' + this.props.city
         )
       );
     }

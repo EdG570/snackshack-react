@@ -10,7 +10,17 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = require('react-redux');
+var _redux = require('redux');
+
+var _venue_summary = require('./venue_summary');
+
+var _venue_summary2 = _interopRequireDefault(_venue_summary);
+
+var _venue_image = require('./venue_image');
+
+var _venue_image2 = _interopRequireDefault(_venue_image);
+
+var _actions = require('../../actions');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20,50 +30,59 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var VenueDetail = function (_Component) {
-  _inherits(VenueDetail, _Component);
+var Venue = function (_Component) {
+  _inherits(Venue, _Component);
 
-  function VenueDetail(props) {
-    _classCallCheck(this, VenueDetail);
+  function Venue(props) {
+    _classCallCheck(this, Venue);
 
-    return _possibleConstructorReturn(this, (VenueDetail.__proto__ || Object.getPrototypeOf(VenueDetail)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Venue.__proto__ || Object.getPrototypeOf(Venue)).call(this, props));
+
+    _this.goToDetails = _this.goToDetails.bind(_this);
+    return _this;
   }
 
-  _createClass(VenueDetail, [{
-    key: 'findVenue',
-    value: function findVenue() {
-      var _this2 = this;
+  _createClass(Venue, [{
+    key: 'goToDetails',
+    value: function goToDetails() {
+      var venue = this.props.venue.venue;
 
-      return this.props.venues.filter(function (venue) {
-        return venue.venue.name === _this2.props.params.venue;
-      });
+      this.context.router.push('/venues/' + venue.name);
     }
   }, {
     key: 'render',
     value: function render() {
-      var selectedVenue = this.findVenue();
+      var venue = this.props.venue.venue;
 
       return _react2.default.createElement(
         'div',
         null,
-        console.log(selectedVenue)
+        _react2.default.createElement(
+          'li',
+          { onClick: this.goToDetails, key: venue.name },
+          _react2.default.createElement(
+            'h2',
+            null,
+            venue.name
+          ),
+          _react2.default.createElement(_venue_image2.default, { venue: this.props.venue }),
+          _react2.default.createElement(_venue_summary2.default, { venue: this.props.venue })
+        )
       );
     }
   }]);
 
-  return VenueDetail;
+  return Venue;
 }(_react.Component);
 
-VenueDetail.propTypes = {
-  venues: _react2.default.PropTypes.array.isRequired
+Venue.propTypes = {
+  venue: _react2.default.PropTypes.object
 };
 
-function mapStateToProps(state) {
-  return {
-    venues: state.venues.venues
-  };
-}
+Venue.contextTypes = {
+  router: _react2.default.PropTypes.object
+};
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(VenueDetail);
+exports.default = Venue;
 
-//# sourceMappingURL=venue_detail-compiled.js.map
+//# sourceMappingURL=venue-compiled.js.map

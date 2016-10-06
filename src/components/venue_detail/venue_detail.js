@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import VenueImage from '../venues_list/venue_image';
+import UserFeedback from './user_feedback';
+import Header from '../header';
+
 class VenueDetail extends Component {
   constructor(props) {
     super(props);
@@ -14,9 +18,13 @@ class VenueDetail extends Component {
 
   render() {
     const selectedVenue = this.findVenue();
+    const name = selectedVenue[0].venue.name;
 
     return (
-      <div>
+      <div className="venue-container">
+        <Header />
+        <VenueImage venue={selectedVenue[0]} />
+        <UserFeedback venue={selectedVenue[0]} />
         {console.log(selectedVenue)}
       </div>
     );

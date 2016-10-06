@@ -4,8 +4,8 @@ import { Route, IndexRoute } from 'react-router';
 import App from './components/app';
 import CitySearch from './components/city_search';
 import FoodSearch from './components/food_search';
-import VenuesList from './components/venues_list';
-import VenueDetail from './components/venue_detail';
+import VenuesList from './components/venues_list/venues_list';
+import VenueDetail from './components/venue_detail/venue_detail';
 
 export default (
   <Route path="/" component={App}>

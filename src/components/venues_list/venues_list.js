@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import Venue from './venue';
-import SearchDetails from './search_details';
-
+import SearchDetails from '../search_details';
+import Header from '../header';
 
 class VenuesList extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class VenuesList extends Component {
   render() {
     return (
       <div className="venue-list">
-        <h1>SNACKSHACK</h1>
+        <Header />
         <SearchDetails  />
         <ul>
           {

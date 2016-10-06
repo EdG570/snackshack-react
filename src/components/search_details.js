@@ -5,7 +5,7 @@ class SearchDetails extends Component {
   render() {
     return (
       <div>
-        <h3>{`Displaying results for ${this.props.food.food} in ${this.props.city.city}`}</h3>
+        <h3>{`Displaying results for ${this.props.food} in ${this.props.city}`}</h3>
       </div>
     );
   }
